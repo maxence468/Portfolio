@@ -1,0 +1,38 @@
+#head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* pousse les blocs gauche/droite */
+  padding: 0 10%; /* un peu d’air */
+  background-color: rgba(34, 45, 65, 1);
+}
+
+.nom {
+	color: rgba(215, 108, 88, 1);
+}
+
+.menu {
+  display: flex;
+  gap: 20px; /* espace entre les items */
+  color: white;
+  font-size: 120%;
+}
+
+#main{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#lien{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#sio{
+	width: 10%;
+	height: 10%;
+}
+
+
+  
