@@ -1,8 +1,12 @@
 #head {
+	position: fixed;
+
+  width: 100%;
+
   display: flex;
   align-items: center;
-  justify-content: space-between; /* pousse les blocs gauche/droite */
-  padding: 0 10%; /* un peu d’air */
+  justify-content: space-between;
+  padding: 0 10%;
   background-color: rgba(34, 45, 65, 1);
 }
 
@@ -12,7 +16,7 @@
 
 .menu {
   display: flex;
-  gap: 20px; /* espace entre les items */
+  gap: 20px;
   color: white;
   font-size: 120%;
 }
@@ -21,17 +25,41 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	padding: 5% 15%;
+  background-color: rgba(55, 65, 88, 1);
+  color: white;
+  padding-top: 10%;
 }
 
 #lien{
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-between;
+	padding: 5% 30%;
 }
 
 #sio{
-	width: 10%;
-	height: 10%;
+	width: 100%;
+	height: 100%;
+  border-radius: 10%;
+
+}
+
+
+
+#p2{
+	display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+}
+
+
+h1{
+	color: rgba(215, 108, 88, 1);
+}
+h2{
+	color: rgba(55, 65, 88, 1);
 }
 
 
