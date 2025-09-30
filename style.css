@@ -1,15 +1,13 @@
 #head {
     position: fixed;
-
-  width: 100%;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 10%;
-  background-color: rgba(34, 45, 65, 1);
-  order: 100;
-  z-index: 10000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    background-color: rgba(34, 45, 65, 1);
+    order: 100;
+    z-index: 10000;
 }
 
 .nom {
@@ -144,4 +142,8 @@ ul.timeline > li:before {
 
 .date{
     font-weight: lighter;
+}
+
+main{
+    
 }
