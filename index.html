@@ -142,7 +142,7 @@
   		<th class="realisation" colspan="7">Réalisation en cours de formation</th>
   	</tr>
     <tr>
-      <th>Vitamine (worspress)</th>
+      <th><p class="myText" data-src="img/vitamines.jpg" style="cursor:pointer;" >Vitamine (worspress)</p></th>
       <td></td>
       <td></td>
       <td><i class="bi bi-check-lg"></i></td>
@@ -151,7 +151,7 @@
       <td></td>
     </tr>
     <tr>
-      <th>TP Analyse de log (Java - BDD)</th>
+      <th><p class="myText" data-src="" style="cursor:pointer;" >TP Analyse de log (Java - BDD)</p></th>
       <td></td>
       <td><i class="bi bi-check-lg"></i></td>
       <td></td>
@@ -160,7 +160,7 @@
       <td></td>
     </tr>
     <tr>
-      <th>TP Loueur voiture en groupe (php)</th>
+      <th><p class="myText" data-src="" style="cursor:pointer;" >TP Loueur voiture en groupe (php)</p></th>
       <td></td>
       <td></td>
       <td></td>
@@ -169,7 +169,7 @@
       <td></td>
     </tr>
     <tr>
-      <th>TP active directory </th>
+      <th><p class="myText" data-src="" style="cursor:pointer;" >TP active directory </p></th>
       <td><i class="bi bi-check-lg"></i></td>
       <td></td>
       <td></td>
@@ -178,7 +178,7 @@
       <td></td>
     </tr>
     <tr>
-      <th>Linkedin</th>
+      <th><p class="myText" data-src="" style="cursor:pointer;" >Linkedin</p></th>
       <td></td>
       <td></td>
       <td></td>
@@ -190,7 +190,7 @@
   		<th class="realisation" colspan="7">Réalisations en milieu professionnel en cours de première année</th>
   	</tr>
   	<tr>
-      <th>Grafana (web)</th>
+      <th><p class="myText" data-src="" style="cursor:pointer;" >Grafana (web)</p></th>
       <td></td>
       <td><i class="bi bi-check-lg"></i></td>
       <td></td>
@@ -199,7 +199,7 @@
       <td></td>
     </tr>
     <tr>
-      <th>Automatisation de mail (PLSQL html)</th>
+      <th><p class="myText" data-src="" style="cursor:pointer;" >Automatisation de mail (PLSQL, html)</p></th>
       <td></td>
       <td><i class="bi bi-check-lg"></i></td>
       <td></td>
@@ -208,7 +208,7 @@
       <td></td>
     </tr>
     <tr>
-      <th>Amelioration du detail des erreurs (PLSQL)</th>
+      <th><p class="myText" data-src="img/exo.jpg" style="cursor:pointer;" >Amelioration du detail des erreurs (PLSQL)</p></th>
       <td></td>
       <td><i class="bi bi-check-lg"></i></td>
       <td></td>
@@ -231,6 +231,15 @@
 	<h1>Veilles</h1>
 </div>
 
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
 <footer id="contact">
 	<h2>Contact</h2>
 	<div>
@@ -242,6 +251,31 @@
 		</div>
 	</div>
 </footer>
+
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var text = document.getElementsByClassName("myText");
+var modalImg = document.getElementById("img01");
+
+for (var i = 0; i < text.length; i++) {
+  text[i].onclick = function() {
+	  modal.style.display = "block";
+	  modalImg.src = this.getAttribute("data-src");
+ 	}
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
 
 </body> 	
 </html>
