@@ -32,7 +32,7 @@ html, body {
     color: rgba(215, 108, 88, 1);
 }
 
-#main{
+.main{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -90,10 +90,10 @@ h2{
 }
 
 #desc{
-	background-color: rgba(55, 65, 88, 1);
 	color: white;
 	padding: 2%;
 	border-radius: 20px;
+    background-color: rgba(55, 65, 88, 1);
     margin: 10%;
     width: 80%;
     font-size: 115%;
@@ -367,4 +367,9 @@ hr{
   #modalImg {
     width: 100%;
   }
+}
+
+
+.competences{
+    margin-top: 7vh;
 }
