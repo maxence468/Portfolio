@@ -32,15 +32,27 @@ html, body {
     color: rgba(215, 108, 88, 1);
 }
 
-.main{
+#main{
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
-	padding: 5% 15%;
+	justify-content: center;
     background-color: rgba(55, 65, 88, 1);
     color: white;
-    padding-top: 10%;
+    height: 10vh;
+    transition: height 2s;
 }
+
+#main.fullscreen {
+    height: 100vh;
+
+}
+#card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 
 #lien{
 	display: flex;
@@ -54,16 +66,6 @@ html, body {
 	height: 100%;
   border-radius: 30px;
 }
-
-
-
-.p2{
-	display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 350px;
-}
-
 
 h1{
 	color: rgba(215, 108, 88, 1);
