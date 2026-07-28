@@ -24,8 +24,8 @@ export default function Header() {
 
         <div className="flex gap-5">
           <NavLink to="/">Accueil</NavLink>
-          <NavLink to="/#experience">Experience</NavLink>
           <NavLink to="/#projets">Projets</NavLink>
+          <NavLink to="/#experience">Experience</NavLink>
         </div>
       </nav>
     </header>
