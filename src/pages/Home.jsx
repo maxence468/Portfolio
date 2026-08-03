@@ -80,6 +80,13 @@ export default function Home() {
               me permet d'explorer l'infrastructure, le réseau et
               l'auto-hébergement.
             </p>
+            <a
+              href="/Portfolio/CV_Maxence_Barthelemy.pdf"
+              download
+              className="mt-8 px-5 py-3 border border-border rounded flex items-center gap-3 w-fit text-zinc-400 hover:text-primary hover:border-primary transition-colors"
+            >
+              Télécharger mon CV
+            </a>
           </div>
 
           {/* Tags compétences */}
