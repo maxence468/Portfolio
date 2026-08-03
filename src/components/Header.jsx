@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <header>
       <nav className="fixed top-0 left-0 right-0 z-40 h-20 border-b border-border flex items-center justify-between px-5 text-2xl font-(family-name:--font-spacegrotesk) bg-card">
-        <a className="flex gap-2.5 items-center" href="/#">
+        <a className="flex gap-2.5 items-center" href="#">
           <div className="text-primary glow">●</div>
           <div>PORTFOLIO</div>
         </a>
