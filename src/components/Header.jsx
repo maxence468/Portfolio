@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-const NavLink = ({ to, children }) => (
+const NavLink = ({ href, children }) => (
   <div className="relative group">
     <Link
-      to={to}
+      href={href}
       className="text-foreground hover:text-primary transition-colors"
     >
       {children}
@@ -23,9 +23,10 @@ export default function Header() {
         </a>
 
         <div className="flex gap-5">
-          <NavLink to="/">Accueil</NavLink>
-          <NavLink to="/#projets">Projets</NavLink>
-          <NavLink to="/#experience">Experience</NavLink>
+          <a href="#accueil">Accueil</a>
+          <a href="#apropos">A propos</a>
+          <a href="#projets">Projets</a>
+          <a href="#experience">Experience</a>
         </div>
       </nav>
     </header>

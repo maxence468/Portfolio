@@ -36,3 +36,7 @@ body {
 .glow {
   text-shadow: 0 0 8px hsl(var(--primary) / 0.6);
 }
+
+html {
+  scroll-behavior: smooth;
+}

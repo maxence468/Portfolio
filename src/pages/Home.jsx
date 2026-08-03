@@ -20,6 +20,12 @@ import liste from "../assets/liste_javafx.png";
 import schema_javafx from "../assets/schema_architecture_applicative_javafx.drawio.png";
 
 import logo_seca from "../assets/logo_seca.png";
+import architecture_seca from "../assets/architecture_seca.png";
+import seca_page_disque from "../assets/seca_page_disque.png";
+import seca_page_filtre from "../assets/seca_page_filtre.png";
+import seca_utilitaire_intel from "../assets/seca_utilitaire_intel.png";
+import serveur_seca from "../assets/serveur_seca.jpeg";
+
 import logo_exo from "../assets/exo_RVB.png";
 
 import portfolio from "../assets/portfolio.jpg";
@@ -30,7 +36,10 @@ export default function Home() {
   return (
     <main>
       {/* PARTIE ACCUEIL */}
-      <div className="relative h-screen flex items-center justify-center border-b border-border">
+      <div
+        id="accueil"
+        className="relative h-screen flex items-center justify-center border-b border-border"
+      >
         <div className="relative z-10 text-center">
           <TextType
             text={["Bienvenue sur mon portfolio", "Maxence BARTHELEMY"]}
@@ -47,22 +56,78 @@ export default function Home() {
           />
         </div>
       </div>
+
+      {/* PARTIE A PROPOS */}
+      <div
+        id="apropos"
+        className="flex flex-col items-center justify-center border-b border-border py-30 h-screen"
+      >
+        <div className="pb-5 text-5xl font-bold text-primary">À PROPOS</div>
+        <hr className="w-60 border-border mb-16" />
+
+        <div className="flex flex-col md:flex-row items-start gap-12 w-5/6 max-w-4xl">
+          {/* Texte */}
+          <div className="flex-1">
+            <p className="text-zinc-500 leading-relaxed text-lg">
+              Étudiant de 19 ans basé à Lyon, titulaire d'un BTS SIO option
+              SLAM, je recherche une alternance à partir de septembre 2026 pour
+              préparer un Bachelor Développement Web Fullstack.
+            </p>
+            <p className="text-zinc-500 leading-relaxed text-lg mt-4">
+              Passionné par le développement backend, j'aime construire des
+              applications robustes et comprendre ce qui se passe sous le capot.
+              En dehors du code, je gère mon propre homelab sous Proxmox, ce qui
+              me permet d'explorer l'infrastructure, le réseau et
+              l'auto-hébergement.
+            </p>
+          </div>
+
+          {/* Tags compétences */}
+          <div className="flex flex-wrap gap-2 md:w-48">
+            {[
+              "PHP",
+              "Laravel",
+              "Java",
+              "Kotlin",
+              "C",
+              "JavaScript",
+              "React",
+              "HTML/CSS",
+              "SQL/PL-SQL",
+              "Godot",
+              "Linux",
+              "Proxmox",
+            ].map((tech) => (
+              <span
+                key={tech}
+                className="px-3 py-1 text-sm rounded-full border border-border text-zinc-400"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* PARTIE PROJET */}
-      <div className="flex flex-col items-center justify-center border-b border-border py-30">
+      <div
+        id="projets"
+        className="flex flex-col items-center justify-center border-b border-border py-30"
+      >
         <div className=" pb-5 text-5xl font-bold text-primary">Projets</div>
         <hr className="w-60 border-border" />
 
         {/* PORTFOLIO */}
-        <div className="flex justify-center border-amber-600 h-120 w-5/6 mt-20">
-          <div className=" border-b-emerald-900 flex-1 overflow-hidden rounded bg-black">
+        <div className="flex justify-center min-h-120 w-5/6 mt-20">
+          <div className=" flex-1 overflow-hidden rounded bg-black h-120">
             <Carousel images={[portfolio]} />
           </div>
-          <div className=" border-b-blue-500 flex-1 m-10 flex flex-col justify-between">
+          <div className="  flex-1 m-10 flex flex-col justify-between">
             <div>
               <h1 className="text-3xl pb-3">Portfolio</h1>
               <h3 className="font-bold pb-5 flex ">
-                React <p className="text-primary px-3"> // </p> Vite{" "}
-                <p className="text-primary px-3"> // </p> Tailwind CSS
+                React <span className="text-primary px-3"> // </span> Vite{" "}
+                <span className="text-primary px-3"> // </span> Tailwind CSS
               </h3>
               <p className="text-zinc-500 pb-5">
                 Portfolio personnel développé en React 19 avec Vite, présentant
@@ -83,16 +148,16 @@ export default function Home() {
         </div>
 
         {/* Homelab */}
-        <div className="flex justify-center border-amber-600 h-120 w-5/6 mt-20">
-          <div className=" border-b-blue-500 flex-1 m-10 flex flex-col justify-between">
+        <div className="flex justify-center  min-h-120 w-5/6 mt-20">
+          <div className="  flex-1 m-10 flex flex-col justify-between">
             <div>
               <h1 className="text-3xl pb-3">Homelab</h1>
               <h3 className="font-bold pb-5 flex ">
-                Proxmox VE <p className="text-primary px-3"> // </p> OPNsense{" "}
-                <p className="text-primary px-3"> // </p> Pi-hole{" "}
-                <p className="text-primary px-3"> // </p> Nextcloud{" "}
-                <p className="text-primary px-3"> // </p> Tailscale{" "}
-                <p className="text-primary px-3"> // </p> Linux
+                Proxmox VE <span className="text-primary px-3"> // </span>{" "}
+                OPNsense <span className="text-primary px-3"> // </span> Pi-hole{" "}
+                <span className="text-primary px-3"> // </span> Nextcloud{" "}
+                <span className="text-primary px-3"> // </span> Tailscale{" "}
+                <span className="text-primary px-3"> // </span> Linux
               </h3>
               <p className="text-zinc-500 pb-5">
                 Serveur personnel auto-hébergé, monté sur un HP 800 G2 Desktop
@@ -106,33 +171,24 @@ export default function Home() {
                 de ports sur internet.
               </p>
             </div>
-
-            {/* <a
-              href=""
-              className="border border-border w-fit text-center px-5 py-3 flex gap-3.5 rounded"
-              target="_blank"
-            >
-              <FolderGit2 className="size-6 text-primary" />
-              Voir le projet
-            </a> */}
           </div>
-          <div className=" border-b-emerald-900 flex-1 overflow-hidden rounded bg-black">
+          <div className="  flex-1 overflow-hidden rounded bg-black h-120">
             <Carousel images={[proxmox]} />
           </div>
         </div>
 
         {/* API METEO */}
-        <div className="flex justify-center border-amber-600 h-120 w-5/6 mt-20">
-          <div className=" border-b-emerald-900 flex-1 overflow-hidden rounded bg-black">
+        <div className="flex justify-center  min-h-120 w-5/6 mt-20">
+          <div className="  flex-1 overflow-hidden rounded bg-black h-120">
             <Carousel images={[reponse, limit, request]} />
           </div>
-          <div className=" border-b-blue-500 flex-1 m-10 flex flex-col justify-between">
+          <div className="  flex-1 m-10 flex flex-col justify-between">
             <div>
               <h1 className="text-3xl pb-3">Weather API Wrapper</h1>
               <h3 className="font-bold pb-5 flex ">
-                Node.js <p className="text-primary px-3"> // </p> Express
-                <p className="text-primary px-3"> // </p> Redis
-                <p className="text-primary px-3"> // </p> Axios
+                Node.js <span className="text-primary px-3"> // </span> Express
+                <span className="text-primary px-3"> // </span> Redis
+                <span className="text-primary px-3"> // </span> Axios
               </h3>
               <p className="text-zinc-500 pb-5">
                 API REST développée en Node.js / Express servant de wrapper vers
@@ -159,14 +215,14 @@ export default function Home() {
         </div>
 
         {/* CINEFORALL */}
-        <div className="flex justify-center border-amber-600 h-120 w-5/6 mt-20">
-          <div className=" border-b-blue-500 flex-1 m-10 flex flex-col justify-between">
+        <div className="flex justify-center  min-h-120 w-5/6 mt-20">
+          <div className="  flex-1 m-10 flex flex-col justify-between">
             <div>
               <h1 className="text-3xl pb-3">CinéForAll</h1>
               <h3 className="font-bold pb-5 flex ">
-                Laravel <p className="text-primary px-3"> // </p> PHP
-                <p className="text-primary px-3"> // </p> MySQL
-                <p className="text-primary px-3"> // </p> HTML/CSS
+                Laravel <span className="text-primary px-3"> // </span> PHP
+                <span className="text-primary px-3"> // </span> MySQL
+                <span className="text-primary px-3"> // </span> HTML/CSS
               </h3>
               <p className="text-zinc-500 pb-5">
                 Application web de réservation de cinéma développée en équipe de
@@ -191,7 +247,7 @@ export default function Home() {
               Voir le projet
             </a>
           </div>
-          <div className=" border-b-emerald-900 flex-1 overflow-hidden rounded bg-black">
+          <div className="  flex-1 overflow-hidden rounded bg-black h-120">
             <Carousel
               images={[accueil, prog, admin, trello, gantt, schema_cine]}
             />
@@ -199,17 +255,17 @@ export default function Home() {
         </div>
 
         {/* JAVAFX FRANCHISE */}
-        <div className="flex justify-center border-amber-600 h-120 w-5/6 mt-20">
-          <div className=" border-b-emerald-900 flex-1 overflow-hidden rounded bg-black">
+        <div className="flex justify-center  min-h-120 w-5/6 mt-20">
+          <div className="  flex-1 overflow-hidden rounded bg-black h-120">
             <Carousel images={[connexion, accueil2, liste, schema_javafx]} />
           </div>
-          <div className=" border-b-blue-500 flex-1 m-10 flex flex-col justify-between">
+          <div className="  flex-1 m-10 flex flex-col justify-between">
             <div>
               <h1 className="text-3xl pb-3">Ciné-Franchise</h1>
               <h3 className="font-bold pb-5 flex ">
-                Java 21 <p className="text-primary px-3"> // </p> JavaFX
-                <p className="text-primary px-3"> // </p> PostgreSQL
-                <p className="text-primary px-3"> // </p> Gradle
+                Java 21 <span className="text-primary px-3"> // </span> JavaFX
+                <span className="text-primary px-3"> // </span> PostgreSQL
+                <span className="text-primary px-3"> // </span> Gradle
               </h3>
               <p className="text-zinc-500 pb-5">
                 Application desktop de gestion d'un réseau de franchises de
@@ -239,25 +295,37 @@ export default function Home() {
       </div>
 
       {/* PARTIE EXPERIENCE  */}
-      <div className="flex flex-col items-center justify-center py-30">
+      <div
+        id="experience"
+        className="flex flex-col items-center justify-center py-30"
+      >
         <div className=" pb-5 text-5xl font-bold text-primary">EXPERIENCE</div>
         <hr className="w-60 border-border" />
 
         {/* SECA */}
-        <div className="flex justify-center border-amber-600 h-120 w-5/6 mt-20">
-          <div className=" border-b-emerald-900 flex-1 overflow-hidden rounded bg-black">
-            <Carousel images={[logo_seca]} />
+        <div className="flex justify-center  min-h-120 w-5/6 mt-20">
+          <div className="  flex-1 overflow-hidden rounded bg-black h-120">
+            <Carousel
+              images={[
+                logo_seca,
+                architecture_seca,
+                seca_page_disque,
+                seca_page_filtre,
+                seca_utilitaire_intel,
+                serveur_seca,
+              ]}
+            />
           </div>
-          <div className=" border-b-blue-500 flex-1 m-10 flex flex-col justify-between">
+          <div className="  flex-1 m-10 flex flex-col justify-between">
             <div>
               <h1 className="text-3xl pb-3">SECA - Janvier 2026</h1>
               <h3 className="font-bold pb-5 flex ">
-                Laravel <p className="text-primary px-3"> // </p> PHP{" "}
-                <p className="text-primary px-3"> // </p> JavaScript{" "}
-                <p className="text-primary px-3"> // </p> Ajax{" "}
-                <p className="text-primary px-3"> // </p> SQL{" "}
-                <p className="text-primary px-3"> // </p> WampServer{" "}
-                <p className="text-primary px-3"> // </p>
+                Laravel <span className="text-primary px-3"> // </span> PHP{" "}
+                <span className="text-primary px-3"> // </span> JavaScript{" "}
+                <span className="text-primary px-3"> // </span> Ajax{" "}
+                <span className="text-primary px-3"> // </span> SQL{" "}
+                <span className="text-primary px-3"> // </span> WampServer{" "}
+                <span className="text-primary px-3"> // </span>
                 HTML/CSS
               </h3>
               <p className="text-zinc-500 pb-5">
@@ -289,14 +357,16 @@ export default function Home() {
         </div>
 
         {/* EXOPARTNER */}
-        <div className="flex justify-center border-amber-600 h-120 w-5/6 mt-20">
-          <div className=" border-b-blue-500 flex-1 m-10 flex flex-col justify-between">
+        <div className="flex justify-center  min-h-120 w-5/6 mt-20">
+          <div className="  flex-1 m-10 flex flex-col justify-between">
             <div>
               <h1 className="text-3xl pb-3">EXO-PARTNERS - Juillet 2025</h1>
               <h3 className="font-bold pb-5 flex ">
-                SQL Server <p className="text-primary px-3"> // </p> Procédures
-                stockées <p className="text-primary px-3"> // </p> SQL Server
-                Management Studio <p className="text-primary px-3"> // </p>
+                SQL Server <span className="text-primary px-3"> // </span>{" "}
+                Procédures stockées{" "}
+                <span className="text-primary px-3"> // </span> SQL Server
+                Management Studio{" "}
+                <span className="text-primary px-3"> // </span>
                 Grafana{" "}
               </h3>
               <p className="text-zinc-500 pb-5">
@@ -327,7 +397,7 @@ export default function Home() {
               VOIR L'ENTREPRISE
             </a>
           </div>
-          <div className=" border-b-emerald-900 flex-1 overflow-hidden rounded bg-black">
+          <div className="  flex-1 overflow-hidden rounded bg-black h-120">
             <Carousel images={[logo_exo]} />
           </div>
         </div>
