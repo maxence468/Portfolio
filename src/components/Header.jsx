@@ -1,18 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-const NavLink = ({ href, children }) => (
-  <div className="relative group">
-    <Link
-      href={href}
-      className="text-foreground hover:text-primary transition-colors"
-    >
-      {children}
-    </Link>
-    <span className="absolute -bottom-1 left-0 h-[2px] bg-primary w-0 group-hover:w-full transition-all duration-300" />
-  </div>
-);
-
 export default function Header() {
   return (
     <header>
