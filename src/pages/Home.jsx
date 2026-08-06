@@ -125,11 +125,11 @@ export default function Home() {
         <hr className="w-60 border-border" />
 
         {/* PORTFOLIO */}
-        <div className="flex justify-center min-h-120 w-5/6 mt-20">
+        <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-0 w-5/6 mt-20">
           <div className=" flex-1 overflow-hidden rounded bg-black h-120">
             <Carousel images={[portfolio]} />
           </div>
-          <div className="  flex-1 m-10 flex flex-col justify-between">
+          <div className="flex-1 m-4 md:m-10 flex flex-col justify-between">
             <div>
               <h1 className="text-3xl pb-3">Portfolio</h1>
               <h3 className="font-bold pb-5 flex ">
@@ -155,8 +155,8 @@ export default function Home() {
         </div>
 
         {/* Homelab */}
-        <div className="flex justify-center  min-h-120 w-5/6 mt-20">
-          <div className="  flex-1 m-10 flex flex-col justify-between">
+        <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-0 w-5/6 mt-20">
+          <div className="flex-1 m-4 md:m-10 flex flex-col justify-between">
             <div>
               <h1 className="text-3xl pb-3">Homelab</h1>
               <h3 className="font-bold pb-5 flex ">
@@ -185,11 +185,11 @@ export default function Home() {
         </div>
 
         {/* API METEO */}
-        <div className="flex justify-center  min-h-120 w-5/6 mt-20">
+        <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-0 w-5/6 mt-20">
           <div className="  flex-1 overflow-hidden rounded bg-black h-120">
             <Carousel images={[reponse, limit, request]} />
           </div>
-          <div className="  flex-1 m-10 flex flex-col justify-between">
+          <div className="flex-1 m-4 md:m-10 flex flex-col justify-between">
             <div>
               <h1 className="text-3xl pb-3">Weather API Wrapper</h1>
               <h3 className="font-bold pb-5 flex ">
@@ -222,8 +222,8 @@ export default function Home() {
         </div>
 
         {/* CINEFORALL */}
-        <div className="flex justify-center  min-h-120 w-5/6 mt-20">
-          <div className="  flex-1 m-10 flex flex-col justify-between">
+        <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-0 w-5/6 mt-20">
+          <div className="flex-1 m-4 md:m-10 flex flex-col justify-between">
             <div>
               <h1 className="text-3xl pb-3">CinéForAll</h1>
               <h3 className="font-bold pb-5 flex ">
@@ -262,11 +262,11 @@ export default function Home() {
         </div>
 
         {/* JAVAFX FRANCHISE */}
-        <div className="flex justify-center  min-h-120 w-5/6 mt-20">
+        <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-0 w-5/6 mt-20">
           <div className="  flex-1 overflow-hidden rounded bg-black h-120">
             <Carousel images={[connexion, accueil2, liste, schema_javafx]} />
           </div>
-          <div className="  flex-1 m-10 flex flex-col justify-between">
+          <div className="flex-1 m-4 md:m-10 flex flex-col justify-between">
             <div>
               <h1 className="text-3xl pb-3">Ciné-Franchise</h1>
               <h3 className="font-bold pb-5 flex ">
@@ -310,7 +310,7 @@ export default function Home() {
         <hr className="w-60 border-border" />
 
         {/* SECA */}
-        <div className="flex justify-center  min-h-120 w-5/6 mt-20">
+        <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-0 w-5/6 mt-20">
           <div className="  flex-1 overflow-hidden rounded bg-black h-120">
             <Carousel
               images={[
@@ -323,7 +323,7 @@ export default function Home() {
               ]}
             />
           </div>
-          <div className="  flex-1 m-10 flex flex-col justify-between">
+          <div className="flex-1 m-4 md:m-10 flex flex-col justify-between">
             <div>
               <h1 className="text-3xl pb-3">SECA - Janvier 2026</h1>
               <h3 className="font-bold pb-5 flex ">
@@ -364,8 +364,8 @@ export default function Home() {
         </div>
 
         {/* EXOPARTNER */}
-        <div className="flex justify-center  min-h-120 w-5/6 mt-20">
-          <div className="  flex-1 m-10 flex flex-col justify-between">
+        <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-0 w-5/6 mt-20">
+          <div className="flex-1 m-4 md:m-10 flex flex-col justify-between">
             <div>
               <h1 className="text-3xl pb-3">EXO-PARTNERS - Juillet 2025</h1>
               <h3 className="font-bold pb-5 flex ">
